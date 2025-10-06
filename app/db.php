@@ -1,7 +1,7 @@
 <?php
 // Fichero de conexión a la Base de Datos
 
-// CORRECCIÓN: El nombre del servidor era "locahost" y ha sido corregido a "localhost".
+
 $servername = "localhost"; 
 $username = "usuario_crud";
 // MEJORA: Es recomendable usar un usuario específico para la app en lugar de 'root'.
