@@ -3,10 +3,10 @@
 
 // CORRECCIÓN: El nombre del servidor era "locahost" y ha sido corregido a "localhost".
 $servername = "localhost"; 
-$username = "root";
+$username = "usuario_crud";
 // MEJORA: Es recomendable usar un usuario específico para la app en lugar de 'root'.
 // Deja la contraseña vacía "" si usas una instalación por defecto de XAMPP/WAMP.
-$password = "root"; 
+$password = "pirineus";
 $dbname = "crud_db";
 
 // Crear conexión usando el paradigma orientado a objetos de mysqli
