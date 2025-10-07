@@ -2,28 +2,28 @@ INDEX
 Correcció codi
 db.php
 En la primera línea, es veu que el nom del servidor està mal escrit, posa locahost i es localhost.
-![alt text](Images/ImageMario1.png)
+![][image1]
 index.php
 Correcció (HTML): Hi havia dues etiquetes <table> niades. S'ha eliminat l'etiqueta supèrflua.
-![alt text](Images/ImageMario2.png)
+![][image2]
 Correcció (HTML): El mètode del formulari era method="posts". S'ha corregit a l'estàndard method="post".
-![alt text](Images/ImageMario3.png)
+![][image3]
 Millora (Usabilitat): S'ha afegit un onclick='return confirm(...)' a l'enllaç d' "Eliminar". Això mostra un quadre de diàleg de confirmació per evitar que els usuaris esborrin registres per accident.
 Millora (Seguretat): Com s'ha esmentat abans, totes les dades que venen de la base de dades ($row['id'], $row['name'], etc.) s'embolcallen amb htmlspecialchars() per prevenir atacs XSS.
-![alt text](Images/ImageMario4.png)
+![][image4]
 Millora (Robustesa): S'ha afegit una comprovació (if ($result->num_rows > 0)) per mostrar un missatge amigable ("No s'han trobat usuaris.") quan la taula està buida, en lloc de mostrar una taula sense files.
 Codi final amb altres millores.
-![alt text](Images/ImageMario5.png)
-![alt text](Images/ImageMario6.png)
+![][image5]
+![][image6]
 add.php
 Correcció (Sintaxi SQL): La consulta preparada original era VALUES (*, ?), la qual cosa és incorrecta. S'ha corregit a VALUES (?, ?), fent servir un marcador de posició per cada valor a inserir.
 Correcció (Seguretat): S'ha implementat correctament la sentència preparada per evitar injecció SQL, vinculant les variables $name i $email amb bind_param("ss", ...). El "ss" indica que ambdues variables són de tipus string (cadena de text).
 Codi final amb altres millores
-![alt text](Images/ImageMario7.png)
+![][image7]
 delete.php
 Correcció (Sintaxis i seguretat): La sintaxi SQL es incorrecta, “DELETE * FROM” s’ha canviat a “DELETE FROM”. A més, s'utilitza una sentència per prevenir inyecció SQL.
 codi final amb millores i correcció
-![alt text](Images/ImageMario8.png)
+![][image8]
 Configuració instal·lació servidor web més php
 1.1 Configuración adaptador
 El primer pas és configurar l’adaptador de xarxa ASIXC2-ITB15
@@ -54,24 +54,23 @@ Configuració d’un servidor de bases de dades amb MariaDB en Debian
 Des del panell d’administració d’IsardVDI, s’ha afegit una segona interfície de xarxa del tipus ASIXC2-ITB15 a la màquina virtual. Un cop afegida, s’ha verificat la disponibilitat de les dues interfícies mitjançant el comandament: ip a
 1.2. Configuració de la interfície estàtica
 S’ha editat el fitxer de configuració de xarxa: sudo nano /etc/network/interfaces s’hi ha inserit la configuració següent:
-![alt text](Images/ImageMario9.png)
+![][image17]
 1.3. Reinici del servei de xarxa
 Un cop guardada la configuració, s’ha reiniciat el servei de xarxa per aplicar els canvis:
 sudo systemctl restart networking
 S’ha verificat novament la configuració amb ip a per assegurar que la interfície enp2s0 disposa de l’adreça IP 192.168.1.2/24.
-![alt text](Images/ImageMario10.png)
+![][image18]
 2. Actualització del sistema
 Abans de procedir amb la instal·lació de paquets, s’ha actualitzat el sistema per garantir la disponibilitat de les darreres actualitzacions de seguretat i estabilitat: sudo apt update
-![alt text](Images/ImageMario11.png)
+![][image19]
 3. Instal·lació de MariaDB
 S’ha instal·lat el servidor de bases de dades MariaDB mitjançant el gestor de paquets d’APT: sudo apt install mariadb-server -y
-![alt text](Images/ImageMario12.png)
-
+![][image20]
 La versió instal·lada és la 11.8.3-MariaDB, proporcionada pels repositoris oficials de Debian 13 (Trixie).
 3.1. Accés al monitor de MariaDB
 Un cop finalitzada la instal·lació, s’ha accedit al monitor de MariaDB com a superusuari: sudo mariadb
-![alt text](Images/ImageMario13.png)
+![][image21]
 3.2. Creació de la base de dades
 Dins de l’entorn interactiu de MariaDB, s’ha creat una base de dades amb un nom identificatiu per al projecte: CREATE DATABASE Error404_TeamNotFound;
 Aquesta base de dades servirà com a repositori central per a les dades de l’aplicació associada al projecte.
-![alt text](Images/ImageMario14.png)
+![][image22]
