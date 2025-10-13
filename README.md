@@ -28,6 +28,17 @@
 * 4.2 Arquitectura
    
 ---
+# 0. Organització
+
+![img_10.png](Images/Correci%C3%B3Codi/img_10.png)
+
+Ens hem organitzat amb el proofhub. Hem dividit les tasques per a cada persona. Una persona s’encarregava de corregir el codi per desprès en una maquina de prova amb tots el serveis configurats fer el test per veure si tot anava bé. Per després compartir-lo amb el resta del equipo. 
+
+Per una altra part, les dues persones s’encarregaven en crear en dues máquinas, el servidor web amb apache, i l’altre server amb la BBDD. Ho hem fet així, perquè considerem que evitem que algú és quedes sense fer res i evitar errors que puguin afectar completement al servidor.
+
+Una vegada aconseguit tot i la base de dades funcionant, es feia el pull a la servidor web amb la versió final. 
+
+![img_11.png](Images/Correci%C3%B3Codi/img_11.png)
 
 # 1. Correcció codi
 
