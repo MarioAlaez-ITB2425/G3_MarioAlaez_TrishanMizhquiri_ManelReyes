@@ -81,7 +81,7 @@
 
 Configuració instal·lació servidor web més php
 
-1.1 Configuración adaptador
+*1.1 Configuración adaptador*
 El primer pas és configurar l’adaptador de xarxa ASIXC2-ITB15
 ![alt text](Images/ImageMario1.png)
 ![alt text](Images/ImageMario2.png)
