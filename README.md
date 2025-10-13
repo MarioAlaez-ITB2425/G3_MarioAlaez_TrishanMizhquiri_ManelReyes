@@ -24,6 +24,8 @@
     * 3.3.4. Creació de Taules per la BBDD
     * 3.3.5. Creació de l’Usuari i Permisos
 ## 4. Arquitectura i Desplegament
+**4.1 Desplegament**
+**4.2 Arquitectura**
    
 ---
 
