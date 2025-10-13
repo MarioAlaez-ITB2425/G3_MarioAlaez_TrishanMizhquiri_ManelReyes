@@ -1,4 +1,4 @@
-![img_10.png](Images/Portada.png)
+        ![img_10.png](Images/Portada.png)
 
 # ÍNDEX
 ## 0. Organització
