@@ -173,3 +173,13 @@ Ara hem de crear la taula que utilitza la página web
 El següent pas es crear l’usuari root per a la xarxa 192.168.1.0 i li donem permisos d’administrador
 
 ![alt text](Images/BBDD/Trishan.10.png)
+
+# Arquitectura i Desplegament
+Des del client, connectem amb Firefox al servidor web i, gràcies al PHP, podem modificar la pàgina i afegir dades com usuaris o editar-les.
+
+![alt text](Images/ImageMario9.png)
+![alt text](Images/ImageMario10.png)
+
+## Arquitectura
+
+![alt text](Images/ImageMario11.png)
