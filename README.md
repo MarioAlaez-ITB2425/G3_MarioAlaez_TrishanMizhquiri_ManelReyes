@@ -184,5 +184,5 @@ Des del client, connectem amb Firefox al servidor web i, gràcies al PHP, podem 
 ![alt text](Images/ImageMario10.png)
 
 ## 4.2 Arquitectura
-
+La nostra arquitectura utilitzada és:
 ![alt text](Images/ImageMario11.png)
