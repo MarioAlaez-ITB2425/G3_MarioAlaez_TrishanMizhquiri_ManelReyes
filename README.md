@@ -34,7 +34,7 @@
 ## 1.1 db.php
 * En la primera línea, es veu que el nom del servidor està mal escrit, posa `locahost` i es `localhost`.
   
-![img.png](./images/Correci%C3%B3Codi/img.png)
+![img.png](Images/Correci%C3%B3Codi/img.png)
 
 ## 1.2 index.php
 * **Correcció (HTML):** Hi havia dues etiquetes `<table>` niades. S'ha eliminat l'etiqueta supèrflua.
