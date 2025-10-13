@@ -98,11 +98,13 @@ fem un mkdir -p /var/www/html/app y utilitzarem l’ordre git clone per clonar t
 ![alt text](Images/ImageMario6.png)
 ## 1.4 Configuració de l'arxiu db.php
 Ara el que fa falta es modificar l’arxiu db.php i hem de posar el nom de la base de dades l’usuari la password i la ip de la máquina que te la BBDD
+
 ![alt text](Images/ImageMario7.png)
 ## 1.5 Ajustar permisos
 Ya per últim s’han ajustat uns permisos amb les comandes
 **sudo chown -R www-www-data /var/www/html/app**
 **sudo chmod -R 755 /var/www/html/app**
+
 ![alt text](Images/ImageMario8.png)
 
 
