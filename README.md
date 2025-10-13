@@ -81,29 +81,30 @@
 
 Configuració instal·lació servidor web més php
 
-*1.1 Configuración adaptador*
+## 1.1 Configuración adaptador
 El primer pas és configurar l’adaptador de xarxa ASIXC2-ITB15
 ![alt text](Images/ImageMario1.png)
 ![alt text](Images/ImageMario2.png)
-
 Una vegada comprovem que funcione i fem ping el següent pas es instalar apache y php
 ![alt text](Images/ImageMario3.png)
-1.2 Instal·lació de serveis
-sudo apt install apache2 php libapache2-mod-php php-mysql -y
+## 1.2 Instal·lació de serveis
+**sudo apt install apache2 php libapache2-mod-php php-mysql -y**
 ![alt text](Images/ImageMario4.png)
-1.3 Ús de la tecnologia git
+## 1.3 Ús de la tecnologia git
 Una vegada instal·lat tot el següent pas es crear els directoris corresponents
 fem un mkdir -p /var/www/html/app y utilitzarem l’ordre git clone per clonar tot el repositori i utilitzarem la comanda mv per moure els arxius php dintre de la carpeta app
 ![alt text](Images/ImageMario5.png)
 ![alt text](Images/ImageMario6.png)
-1.4 Configuració de l'arxiu db.php
+## 1.4 Configuració de l'arxiu db.php
 Ara el que fa falta es modificar l’arxiu db.php i hem de posar el nom de la base de dades l’usuari la password i la ip de la máquina que te la BBDD
 ![alt text](Images/ImageMario7.png)
-1.5 Ajustar permisos
+## 1.5 Ajustar permisos
 Ya per últim s’han ajustat uns permisos amb les comandes
-sudo chown -R www-www-data /var/www/html/app
-sudo chmod -R 755 /var/www/html/app
+**sudo chown -R www-www-data /var/www/html/app**
+**sudo chmod -R 755 /var/www/html/app**
 ![alt text](Images/ImageMario8.png)
+
+
 Configuració d’un servidor de bases de dades amb MariaDB en Debian
 1. Configuració de la xarxa
 1.1. Afegiment d’una interfície de xarxa addicional
