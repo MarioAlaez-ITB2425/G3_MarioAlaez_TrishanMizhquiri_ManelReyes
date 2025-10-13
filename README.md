@@ -23,7 +23,7 @@
     * 3.3.3. Configuració del Servidor de BBDD
     * 3.3.4. Creació de Taules per la BBDD
     * 3.3.5. Creació de l’Usuari i Permisos
-## 4. Desplegament
+## 4. Arquitectura i Desplegament
    
 ---
 
