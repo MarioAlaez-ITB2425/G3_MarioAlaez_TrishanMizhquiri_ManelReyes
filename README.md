@@ -109,29 +109,53 @@ Ya per últim s’han ajustat uns permisos amb les comandes
 ![alt text](Images/ImageMario8.png)
 
 
-Configuració d’un servidor de bases de dades amb MariaDB en Debian
-1. Configuració de la xarxa
-1.1. Afegiment d’una interfície de xarxa addicional
+# 3. Configuració d’un servidor de bases de dades amb MariaDB en Debian
+## 3.1. Configuració de la xarxa
+
+**3.1.1. Afegiment d’una interfície de xarxa addicional**
+
 Des del panell d’administració d’IsardVDI, s’ha afegit una segona interfície de xarxa del tipus ASIXC2-ITB15 a la màquina virtual. Un cop afegida, s’ha verificat la disponibilitat de les dues interfícies mitjançant el comandament: ip a
-1.2. Configuració de la interfície estàtica
+
+**3.1.2. Configuració de la interfície estàtica**
+
 S’ha editat el fitxer de configuració de xarxa: sudo nano /etc/network/interfaces s’hi ha inserit la configuració següent:
 ![][image17]
-1.3. Reinici del servei de xarxa
+
+**3.1.3. Reinici del servei de xarxa**
+
 Un cop guardada la configuració, s’ha reiniciat el servei de xarxa per aplicar els canvis:
 sudo systemctl restart networking
 S’ha verificat novament la configuració amb ip a per assegurar que la interfície enp2s0 disposa de l’adreça IP 192.168.1.2/24.
 ![][image18]
-2. Actualització del sistema
+## 3.2. Actualització del sistema
 Abans de procedir amb la instal·lació de paquets, s’ha actualitzat el sistema per garantir la disponibilitat de les darreres actualitzacions de seguretat i estabilitat: sudo apt update
 ![][image19]
-3. Instal·lació de MariaDB
+## 3.3. Instal·lació de MariaDB
 S’ha instal·lat el servidor de bases de dades MariaDB mitjançant el gestor de paquets d’APT: sudo apt install mariadb-server -y
 ![][image20]
 La versió instal·lada és la 11.8.3-MariaDB, proporcionada pels repositoris oficials de Debian 13 (Trixie).
-3.1. Accés al monitor de MariaDB
+
+**3.3.1. Accés al monitor de MariaDB**
+
 Un cop finalitzada la instal·lació, s’ha accedit al monitor de MariaDB com a superusuari: sudo mariadb
 ![][image21]
-3.2. Creació de la base de dades
+
+**3.3.2. Creació de la base de dades**
 Dins de l’entorn interactiu de MariaDB, s’ha creat una base de dades amb un nom identificatiu per al projecte: CREATE DATABASE Error404_TeamNotFound;
 Aquesta base de dades servirà com a repositori central per a les dades de l’aplicació associada al projecte.
 ![][image22]
+
+**3.3. Configuración del servidor de BBDD**
+
+El que fem és configurar mysql de tal forma que el servidor escolta totes les IPs
+![][image23]
+
+**3.4. Creació de taules per la BBDD**
+
+Ara hem de crear la taula que utilitza la página web
+![][image24]
+
+**3.5. Creació de l’usuari i permisos**
+
+El següent pas es crear l’usuari root per a la xarxa 192.168.1.0 i li donem permisos d’administrador
+![][image25]
