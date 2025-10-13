@@ -115,7 +115,7 @@ Ya per últim s’han ajustat uns permisos amb les comandes
 **3.1.1. Afegiment d’una interfície de xarxa addicional**
 
 Des del panell d’administració d’IsardVDI, s’ha afegit una segona interfície de xarxa del tipus ASIXC2-ITB15 a la màquina virtual. Un cop afegida, s’ha verificat la disponibilitat de les dues interfícies mitjançant el comandament: ip a
-
+![alt text].[Images/BBDD/Trishan.1.png]
 **3.1.2. Configuració de la interfície estàtica**
 
 S’ha editat el fitxer de configuració de xarxa: sudo nano /etc/network/interfaces s’hi ha inserit la configuració següent:
