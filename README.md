@@ -1,4 +1,5 @@
 # ÍNDEX
+## 0. Organització
 ## 1. Correcció del Codi
 * 1.1. db.php
 * 1.2. index.php
