@@ -174,12 +174,13 @@ El següent pas es crear l’usuari root per a la xarxa 192.168.1.0 i li donem p
 
 ![alt text](Images/BBDD/Trishan.10.png)
 
-# Arquitectura i Desplegament
+# 4.Arquitectura i Desplegament
+## 4.1Desplegament
 Des del client, connectem amb Firefox al servidor web i, gràcies al PHP, podem modificar la pàgina i afegir dades com usuaris o editar-les.
 
 ![alt text](Images/ImageMario9.png)
 ![alt text](Images/ImageMario10.png)
 
-## Arquitectura
+## 4.2Arquitectura
 
 ![alt text](Images/ImageMario11.png)
