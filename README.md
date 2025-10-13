@@ -1,4 +1,6 @@
-        ![img_10.png](Images/Portada.png)
+<p align="center">
+        <img src="Images/Portada.png">
+</p>
 
 # ÍNDEX
 ## 0. Organització
