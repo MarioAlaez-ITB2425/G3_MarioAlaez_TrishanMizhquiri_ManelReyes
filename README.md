@@ -103,6 +103,7 @@ Ara el que fa falta es modificar l’arxiu db.php i hem de posar el nom de la ba
 ## 1.5 Ajustar permisos
 Ya per últim s’han ajustat uns permisos amb les comandes
 **sudo chown -R www-www-data /var/www/html/app**
+
 **sudo chmod -R 755 /var/www/html/app**
 
 ![alt text](Images/ImageMario8.png)
