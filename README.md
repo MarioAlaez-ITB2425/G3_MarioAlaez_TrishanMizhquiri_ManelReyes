@@ -79,12 +79,13 @@
 
 ---
 
-Configuració instal·lació servidor web més php
+# Configuració instal·lació servidor web més php
 
 ## 1.1 Configuración adaptador
 El primer pas és configurar l’adaptador de xarxa ASIXC2-ITB15
 ![alt text](Images/ImageMario1.png)
 ![alt text](Images/ImageMario2.png)
+
 Una vegada comprovem que funcione i fem ping el següent pas es instalar apache y php
 ![alt text](Images/ImageMario3.png)
 ## 1.2 Instal·lació de serveis
