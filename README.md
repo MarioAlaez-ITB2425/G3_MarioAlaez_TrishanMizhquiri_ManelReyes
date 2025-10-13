@@ -31,27 +31,51 @@
 
 ## 1.1 db.php
 * En la primera línea, es veu que el nom del servidor està mal escrit, posa `locahost` i es `localhost`.
+* 
+![img.png](./images/Correci%C3%B3Codi/img.png)
 
 ## 1.2 index.php
 * **Correcció (HTML):** Hi havia dues etiquetes `<table>` niades. S'ha eliminat l'etiqueta supèrflua.
+
+![img_1.png](./Images/Correci%C3%B3Codi/img_1.png)
+
 * **Correcció (HTML):** El mètode del formulari era `method="posts"`. S'ha corregit a l'estàndard `method="post"`.
+
+![img_2.png](./Images/Correci%C3%B3Codi/img_2.png)
+
 * **Millora (Usabilitat):** S'ha afegit un `onclick='return confirm(...)'` a l'enllaç d' "Eliminar". Això mostra un quadre de diàleg de confirmació per evitar que els usuaris esborrin registres per accident.
 * **Millora (Seguretat):** Com s'ha esmentat abans, totes les dades que venen de la base de dades (`$row['id']`, `$row['name']`, etc.) s'embolcallen amb `htmlspecialchars()` per prevenir atacs XSS.
+
+![img_3.png](./Images/Correci%C3%B3Codi/img_3.png)
+
 * **Millora (Robustesa):** S'ha afegit una comprovació (`if ($result->num_rows > 0)`) per mostrar un missatge amigable ("No s'han trobat usuaris.") quan la taula està buida, en lloc de mostrar una taula sense files.
 * **Codi final amb altres millores.**
+
+![img_4.png](./Images/Correci%C3%B3Codi/img_4.png)
+
+![img_5.png](./Images/Correci%C3%B3Codi/img_5.png)
 
 ## 1.3 add.php
 * **Correcció (Sintaxi SQL):** La consulta preparada original era `VALUES (*, ?)`, la qual cosa és incorrecta. S'ha corregit a `VALUES (?, ?)`, fent servir un marcador de posició per cada valor a inserir.
 * **Correcció (Seguretat):** S'ha implementat correctament la sentència preparada per evitar injecció SQL, vinculant les variables `$name` i `$email` amb `bind_param("ss", ...)`. El `"ss"` indica que ambdues variables són de tipus string (cadena de text).
 * **Codi final amb altres millores.**
 
+![img_6.png](./Images/Correci%C3%B3Codi/img_6.png)
+
 ## 1.4 delete.php
 * **Correcció (Sintaxis i seguretat):** La sintaxi SQL és incorrecta, `DELETE * FROM` s’ha canviat a `DELETE FROM`. A més, s'utilitza una sentència per prevenir injecció SQL.
 * **Codi final amb millores i correcció.**
 
+![img_7.png](./Images/Correci%C3%B3Codi/img_7.png)
+
 ## 1.5 edit.php
 * **Correcció (Sintaxis i seguretat):** La sintaxi de `UPDATE` és incorrecta. `where name=?` s'ha canviat per `SET name = ?`. També, s’utilitza una sentència preparada per l’actualització, prevenint l’inyecció SQL.
+
+![img_8.png](Images/Correci%C3%B3Codi/img_8.png)
+
 * **Codi final i altres millores.**
+
+![img_9.png](Images/Correci%C3%B3Codi/img_9.png)
 
 ---
 
