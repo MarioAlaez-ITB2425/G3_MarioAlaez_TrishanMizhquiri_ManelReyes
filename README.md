@@ -1,30 +1,62 @@
-INDEX
-Correcció codi
-db.php
-En la primera línea, es veu que el nom del servidor està mal escrit, posa locahost i es localhost.
-![][image1]
-index.php
-Correcció (HTML): Hi havia dues etiquetes <table> niades. S'ha eliminat l'etiqueta supèrflua.
-![][image2]
-Correcció (HTML): El mètode del formulari era method="posts". S'ha corregit a l'estàndard method="post".
-![][image3]
-Millora (Usabilitat): S'ha afegit un onclick='return confirm(...)' a l'enllaç d' "Eliminar". Això mostra un quadre de diàleg de confirmació per evitar que els usuaris esborrin registres per accident.
-Millora (Seguretat): Com s'ha esmentat abans, totes les dades que venen de la base de dades ($row['id'], $row['name'], etc.) s'embolcallen amb htmlspecialchars() per prevenir atacs XSS.
-![][image4]
-Millora (Robustesa): S'ha afegit una comprovació (if ($result->num_rows > 0)) per mostrar un missatge amigable ("No s'han trobat usuaris.") quan la taula està buida, en lloc de mostrar una taula sense files.
-Codi final amb altres millores.
-![][image5]
-![][image6]
-add.php
-Correcció (Sintaxi SQL): La consulta preparada original era VALUES (*, ?), la qual cosa és incorrecta. S'ha corregit a VALUES (?, ?), fent servir un marcador de posició per cada valor a inserir.
-Correcció (Seguretat): S'ha implementat correctament la sentència preparada per evitar injecció SQL, vinculant les variables $name i $email amb bind_param("ss", ...). El "ss" indica que ambdues variables són de tipus string (cadena de text).
-Codi final amb altres millores
-![][image7]
-delete.php
-Correcció (Sintaxis i seguretat): La sintaxi SQL es incorrecta, “DELETE * FROM” s’ha canviat a “DELETE FROM”. A més, s'utilitza una sentència per prevenir inyecció SQL.
-codi final amb millores i correcció
-![][image8]
+# ÍNDEX
+## 1. Correcció del Codi
+* 1.1. db.php
+* 1.2. index.php
+* 1.3. add.php
+* 1.4. delete.php
+* 1.5. edit.php
+## 2. Configuració i Instal·lació del Servidor Web amb PHP
+* 2.1. Configuració de l'Adaptador de Xarxa
+* 2.2. Instal·lació de Serveis
+* 2.3. Ús de la Tecnologia Git
+* 2.4. Configuració de l'Arxiu db.php
+* 2.5. Ajust de Permisos
+## 3. Configuració del Servidor de Bases de Dades amb MariaDB en Debian
+* **3.1. Configuració de la Xarxa**
+    * 3.1.1. Afegiment d’una Interfície de Xarxa Addicional
+    * 3.1.2. Configuració de la Interfície Estàtica
+    * 3.1.3. Reinici del Servei de Xarxa
+* **3.2. Actualització del Sistema**
+* **3.3. Instal·lació de MariaDB**
+    * 3.3.1. Accés al Monitor de MariaDB
+    * 3.3.2. Creació de la Base de Dades
+    * 3.3.3. Configuració del Servidor de BBDD
+    * 3.3.4. Creació de Taules per la BBDD
+    * 3.3.5. Creació de l’Usuari i Permisos
+## 4. Desplegament
+   
+---
+
+# 1. Correcció codi
+
+## 1.1 db.php
+* En la primera línea, es veu que el nom del servidor està mal escrit, posa `locahost` i es `localhost`.
+
+## 1.2 index.php
+* **Correcció (HTML):** Hi havia dues etiquetes `<table>` niades. S'ha eliminat l'etiqueta supèrflua.
+* **Correcció (HTML):** El mètode del formulari era `method="posts"`. S'ha corregit a l'estàndard `method="post"`.
+* **Millora (Usabilitat):** S'ha afegit un `onclick='return confirm(...)'` a l'enllaç d' "Eliminar". Això mostra un quadre de diàleg de confirmació per evitar que els usuaris esborrin registres per accident.
+* **Millora (Seguretat):** Com s'ha esmentat abans, totes les dades que venen de la base de dades (`$row['id']`, `$row['name']`, etc.) s'embolcallen amb `htmlspecialchars()` per prevenir atacs XSS.
+* **Millora (Robustesa):** S'ha afegit una comprovació (`if ($result->num_rows > 0)`) per mostrar un missatge amigable ("No s'han trobat usuaris.") quan la taula està buida, en lloc de mostrar una taula sense files.
+* **Codi final amb altres millores.**
+
+## 1.3 add.php
+* **Correcció (Sintaxi SQL):** La consulta preparada original era `VALUES (*, ?)`, la qual cosa és incorrecta. S'ha corregit a `VALUES (?, ?)`, fent servir un marcador de posició per cada valor a inserir.
+* **Correcció (Seguretat):** S'ha implementat correctament la sentència preparada per evitar injecció SQL, vinculant les variables `$name` i `$email` amb `bind_param("ss", ...)`. El `"ss"` indica que ambdues variables són de tipus string (cadena de text).
+* **Codi final amb altres millores.**
+
+## 1.4 delete.php
+* **Correcció (Sintaxis i seguretat):** La sintaxi SQL és incorrecta, `DELETE * FROM` s’ha canviat a `DELETE FROM`. A més, s'utilitza una sentència per prevenir injecció SQL.
+* **Codi final amb millores i correcció.**
+
+## 1.5 edit.php
+* **Correcció (Sintaxis i seguretat):** La sintaxi de `UPDATE` és incorrecta. `where name=?` s'ha canviat per `SET name = ?`. També, s’utilitza una sentència preparada per l’actualització, prevenint l’inyecció SQL.
+* **Codi final i altres millores.**
+
+---
+
 Configuració instal·lació servidor web més php
+
 1.1 Configuración adaptador
 El primer pas és configurar l’adaptador de xarxa ASIXC2-ITB15
 ![alt text](Images/ImageMario1.png)
