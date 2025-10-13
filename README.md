@@ -1,32 +1,34 @@
+![img_10.png](Images/Portada.png)
+
 # ÍNDEX
 ## 0. Organització
 ## 1. Correcció del Codi
-* 1.1. db.php
-* 1.2. index.php
-* 1.3. add.php
-* 1.4. delete.php
-* 1.5. edit.php
+    1.1. db.php
+    1.2. index.php
+    1.3. add.php
+    1.4. delete.php
+    1.5. edit.php
 ## 2. Configuració i Instal·lació del Servidor Web amb PHP
-* 2.1. Configuració de l'Adaptador de Xarxa
-* 2.2. Instal·lació de Serveis
-* 2.3. Ús de la Tecnologia Git
-* 2.4. Configuració de l'Arxiu db.php
-* 2.5. Ajust de Permisos
+    2.1. Configuració de l'Adaptador de Xarxa
+    2.2. Instal·lació de Serveis
+    2.3. Ús de la Tecnologia Git
+    2.4. Configuració de l'Arxiu db.php
+    2.5. Ajust de Permisos
 ## 3. Configuració del Servidor de Bases de Dades amb MariaDB en Debian
-* 3.1. Configuració de la Xarxa
-    * 3.1.1. Afegiment d’una Interfície de Xarxa Addicional
-    * 3.1.2. Configuració de la Interfície Estàtica
-    * 3.1.3. Reinici del Servei de Xarxa
-* 3.2. Actualització del Sistema
-* 3.3. Instal·lació de MariaDB
-    * 3.3.1. Accés al Monitor de MariaDB
-    * 3.3.2. Creació de la Base de Dades
-    * 3.3.3. Configuració del Servidor de BBDD
-    * 3.3.4. Creació de Taules per la BBDD
-    * 3.3.5. Creació de l’Usuari i Permisos
+    3.1. Configuració de la Xarxa
+        3.1.1. Afegiment d’una Interfície de Xarxa Addicional
+        3.1.2. Configuració de la Interfície Estàtica
+        3.1.3. Reinici del Servei de Xarxa
+    3.2. Actualització del Sistema
+    3.3. Instal·lació de MariaDB
+        3.3.1. Accés al Monitor de MariaDB
+        3.3.2. Creació de la Base de Dades
+        3.3.3. Configuració del Servidor de BBDD
+        3.3.4. Creació de Taules per la BBDD
+        3.3.5. Creació de l’Usuari i Permisos
 ## 4. Arquitectura i Desplegament
-* 4.1 Desplegament
-* 4.2 Arquitectura.
+    4.1 Desplegament
+    4.2 Arquitectura.
    
 ---
 # 0. Organització
